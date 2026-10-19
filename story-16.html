@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern woman finds herself in a royal era and becomes entangled in the lives of princes competing for power.">
+    <title>Moon Lovers: Scarlet Heart Ryeo | K-Drama Storybook</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../index.html">
+            <span class="brand-mark">♡</span>
+            <div>
+                <p class="eyebrow">ONE-CHAPTER COLLECTION</p>
+                <h1>K-Drama Storybook</h1>
+            </div>
+        </a>
+        <nav aria-label="Story navigation">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#library">Library</a>
+            <button id="themeToggle" class="nav-button" type="button">☾ Dark mode</button>
+        </nav>
+    </header>
+
+    <main class="story-page-main">
+        <div class="story-page-layout">
+            <aside class="story-page-cover">
+                <img src="../images/covers/k16.jpg" data-fallback="../images/covers/16.svg" onerror="this.onerror=null;this.src=this.dataset.fallback;" alt="Cover for Moon Lovers: Scarlet Heart Ryeo">
+            </aside>
+
+            <article class="story-page-paper">
+                <p class="eyebrow">K-DRAMA · STORY 16 OF 30</p>
+                <h2>Moon Lovers: Scarlet Heart Ryeo</h2>
+                <p><em>Historical • Romance</em> · By Storybook Studio</p>
+
+                <div class="story-synopsis">
+                    <strong>Synopsis</strong>
+                    <p>A modern woman finds herself in a royal era and becomes entangled in the lives of princes competing for power.</p>
+                </div>
+
+                <h3>A Moonlit Beginning</h3>
+                <img class="story-page-scene" src="../images/scenes/16.svg" alt="Illustration for Moon Lovers: Scarlet Heart Ryeo">
+                <p>Thrown into a court full of ceremony and danger, she tries to protect her heart while learning the rules of a different time. Every choice changes the path ahead.</p>
+                <p>As the day comes to a close, the characters understand that the next chapter of life is not always written for them. Sometimes it begins with one brave decision, one honest conversation, or one person choosing to stay.</p>
+
+                <div class="story-page-actions">
+                    <a class="secondary" href="../index.html#library">← Back to Library</a>
+                    <a href="story-17.html">Next Story →</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        if (localStorage.getItem('kstory-theme') === 'dark') {
+            document.body.classList.add('dark');
+            toggle.textContent = '☀ Light mode';
+        }
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const dark = document.body.classList.contains('dark');
+            toggle.textContent = dark ? '☀ Light mode' : '☾ Dark mode';
+            localStorage.setItem('kstory-theme', dark ? 'dark' : 'light');
+        });
+    </script>
+    <script src="../story-pages.js" onerror="this.onerror=null;this.src='story-pages.js';"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Students trapped inside their school must work together when a sudden outbreak turns their campus into a dangerous maze.">
+    <title>All of Us Are Dead | K-Drama Storybook</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../index.html">
+            <span class="brand-mark">♡</span>
+            <div>
+                <p class="eyebrow">ONE-CHAPTER COLLECTION</p>
+                <h1>K-Drama Storybook</h1>
+            </div>
+        </a>
+        <nav aria-label="Story navigation">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#library">Library</a>
+            <button id="themeToggle" class="nav-button" type="button">☾ Dark mode</button>
+        </nav>
+    </header>
+
+    <main class="story-page-main">
+        <div class="story-page-layout">
+            <aside class="story-page-cover">
+                <img src="../images/covers/k23.jpg" data-fallback="../images/covers/22.svg" onerror="this.onerror=null;this.src=this.dataset.fallback;" alt="Cover for All of Us Are Dead">
+            </aside>
+
+            <article class="story-page-paper">
+                <p class="eyebrow">K-DRAMA · STORY 22 OF 30</p>
+                <h2>All of Us Are Dead</h2>
+                <p><em>Thriller • Survival</em> · By Storybook Studio</p>
+
+                <div class="story-synopsis">
+                    <strong>Synopsis</strong>
+                    <p>Students trapped inside their school must work together when a sudden outbreak turns their campus into a dangerous maze.</p>
+                </div>
+
+                <h3>The Last Classroom</h3>
+                <img class="story-page-scene" src="../images/scenes/22.svg" alt="Illustration for All of Us Are Dead">
+                <p>With communication cut off, a group of classmates relies on courage and teamwork to find a safe route. Their choices reveal who they can trust when everything changes.</p>
+                <p>As the day comes to a close, the characters understand that the next chapter of life is not always written for them. Sometimes it begins with one brave decision, one honest conversation, or one person choosing to stay.</p>
+
+                <div class="story-page-actions">
+                    <a class="secondary" href="../index.html#library">← Back to Library</a>
+                    <a href="story-23.html">Next Story →</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        if (localStorage.getItem('kstory-theme') === 'dark') {
+            document.body.classList.add('dark');
+            toggle.textContent = '☀ Light mode';
+        }
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const dark = document.body.classList.contains('dark');
+            toggle.textContent = dark ? '☀ Light mode' : '☾ Dark mode';
+            localStorage.setItem('kstory-theme', dark ? 'dark' : 'light');
+        });
+    </script>
+    <script src="../story-pages.js" onerror="this.onerror=null;this.src='story-pages.js';"></script>
+</body>
+</html>

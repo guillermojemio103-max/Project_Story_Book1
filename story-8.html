@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A blind date arranged as a favor becomes complicated when the person across the table is her own company’s CEO.">
+    <title>Business Proposal | K-Drama Storybook</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../index.html">
+            <span class="brand-mark">♡</span>
+            <div>
+                <p class="eyebrow">ONE-CHAPTER COLLECTION</p>
+                <h1>K-Drama Storybook</h1>
+            </div>
+        </a>
+        <nav aria-label="Story navigation">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#library">Library</a>
+            <button id="themeToggle" class="nav-button" type="button">☾ Dark mode</button>
+        </nav>
+    </header>
+
+    <main class="story-page-main">
+        <div class="story-page-layout">
+            <aside class="story-page-cover">
+                <img src="../images/covers/k8.jpg" data-fallback="../images/covers/08.svg" onerror="this.onerror=null;this.src=this.dataset.fallback;" alt="Cover for Business Proposal">
+            </aside>
+
+            <article class="story-page-paper">
+                <p class="eyebrow">K-DRAMA · STORY 8 OF 30</p>
+                <h2>Business Proposal</h2>
+                <p><em>Romantic Comedy</em> · By Storybook Studio</p>
+
+                <div class="story-synopsis">
+                    <strong>Synopsis</strong>
+                    <p>A blind date arranged as a favor becomes complicated when the person across the table is her own company’s CEO.</p>
+                </div>
+
+                <h3>The Wrong Blind Date</h3>
+                <img class="story-page-scene" src="../images/scenes/08.svg" alt="Illustration for Business Proposal">
+                <p>A simple plan to scare off a potential match goes hilariously wrong. As fake dating and workplace secrets pile up, both leads learn to be more honest about what they want.</p>
+                <p>As the day comes to a close, the characters understand that the next chapter of life is not always written for them. Sometimes it begins with one brave decision, one honest conversation, or one person choosing to stay.</p>
+
+                <div class="story-page-actions">
+                    <a class="secondary" href="../index.html#library">← Back to Library</a>
+                    <a href="story-9.html">Next Story →</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        if (localStorage.getItem('kstory-theme') === 'dark') {
+            document.body.classList.add('dark');
+            toggle.textContent = '☀ Light mode';
+        }
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const dark = document.body.classList.contains('dark');
+            toggle.textContent = dark ? '☀ Light mode' : '☾ Dark mode';
+            localStorage.setItem('kstory-theme', dark ? 'dark' : 'light');
+        });
+    </script>
+    <script src="../story-pages.js" onerror="this.onerror=null;this.src='story-pages.js';"></script>
+</body>
+</html>
